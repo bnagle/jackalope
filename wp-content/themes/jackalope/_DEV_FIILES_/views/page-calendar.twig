@@ -1,0 +1,40 @@
+{% extends "base.twig" %}
+
+
+{% block content %}
+
+
+
+<!-- NOW SHOWING -->
+<!-- ---------------------------------------------------------------------------------------------- -->
+  
+  <section id='calendar_now_playing'>
+
+    <div class='container'><div class='row'><div class='col-md-3 season'>
+          <h2 role="banner">Now Showing</h2>
+    </div></div></div>
+ 
+    {% for current_show in current_season %}
+      {% include ['tease-current_show.twig'] %}
+    {% endfor %}
+  </section>
+
+
+
+<!-- UPCOMING -->
+<!-- ---------------------------------------------------------------------------------------------- -->
+
+  <section id='calendar_upcoming' class='container'>
+
+    <div class='container'><div class='row'><div class='col-md-3 season'>
+        <h2 role="banner">Upcoming</h2>
+    </div></div></div>
+
+    {% for current_show in current_season %}
+      {% include ['tease-upcoming_performance.twig'] %}
+    {% endfor %}
+  </section>
+
+
+
+{% endblock %}

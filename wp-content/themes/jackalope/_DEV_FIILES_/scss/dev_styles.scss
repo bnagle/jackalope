@@ -1,0 +1,400 @@
+
+/* Variables & Mixins */
+/* ---------------------------------------------------------------------------------------- */
+
+/* COLORS */
+$orng_drk: #F0644B;
+$orng_lght:#F3836F;
+
+$drk_drk:  #231E00;
+$drk_lght: #65624D;
+
+$lght_drk: #E9E9E6;
+$lght_lght:#F8F8F3;
+
+/* FONTS */
+@font-face{
+  font-family: 'gaspar_bld';
+  src: url('fonts/Gaspar_Bold-webfont.eot');
+  src: url('fonts/Gaspar_Bold-webfont.eot?#iefix') format('embedded-opentype'), 
+  	url('fonts/Gaspar_Bold-webfont.woff') format('woff'), 
+  	url('fonts/Gaspar_Bold-webfont.ttf') format('truetype'), 
+  	url('fonts/Gaspar_Bold-webfont.svg#fontname') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  }
+
+ @font-face{
+  font-family: 'jackalope_ico';
+  src: url('fonts/jackalope_ico.eot');
+  src: url('fonts/jackalope_ico.eot?#iefix') format('embedded-opentype'), 
+  	url('fonts/jackalope_ico.woff') format('woff'), 
+  	url('fonts/jackalope_ico.ttf') format('truetype'), 
+  	url('fonts/jackalope_ico.svg#fontname') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  }
+
+$gaspar_bld: 'gaspar_bld', Georgia, serif;
+$arial: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$icons: 'jackalope_ico';
+
+/* MIXINS */
+@mixin outline_button($height){
+	overflow: hidden;
+	border:3px solid $orng_drk;
+	adding: 0px;
+	margin: 12px 0 0;
+	text-align: center;
+	width: 100%;
+	height: $height;
+}
+
+
+/* General Styles */
+/* ---------------------------------------------------------------------------------------- */
+
+body {
+	background-color: $lght_lght;
+	color: $drk_lght;
+	font-family: $arial;
+	font-size: 16px;
+	line-height: 30px;
+	padding: 0;
+	margin: 0;
+}
+
+a, a:visited, a:hover{
+	text-decoration: none;
+}
+
+ul{
+	list-style: none
+}
+
+li{
+	display: inline;
+}
+
+/* TYPE */
+h1 {
+	color: $orng_drk;
+	font-family: $gaspar_bld;
+	font-weight: normal;
+	font-size: 3em; 		/* 48px/16px */
+	line-height: 1.25em;		/* 60px/48px */
+}
+
+h1 a, h1 a:visited {
+	color: $orng_drk;
+}
+
+h1 a:hover {
+	color: $orng_lght;
+}
+
+h2 {
+	color: $drk_drk;
+	font-family: $gaspar_bld;
+	font-weight: normal;
+	font-size: 1.875em; 	/* 30px/16px */
+	line-height: 1.2em;		/* 36px/30px */
+}
+
+h2 a, h2 a:visited {
+	color: $drk_drk;
+}
+
+h2 a:hover {
+	color: $drk_lght;
+}
+
+h3 {
+	color: $drk_drk;
+	font-family: $arial;
+	font-weight: 700;
+	font-size: 0.875em; 	/* 14px/16px */
+	line-height: 1.285714286em;		/* 18px/14px */
+	margin: 0;
+}
+
+h3 a, h3 a:visited {
+	color: $drk_lght;
+}
+
+h3 a:hover {
+	color: $drk_drk;
+}
+
+
+
+
+/* Navigation */
+/* ---------------------------------------------------------------------------------------- */
+
+
+/* INITIAL NAV (BEFORE SCROLL) */ 
+nav.main_nav{
+	background-color: $lght_drk;
+	font-weight: 700;
+}
+
+.main_nav .primary_nav a, .main_nav .primary_nav a:visited {
+	color: $orng_drk;
+}
+
+.main_nav .primary_nav a:hover {
+	color: $orng_lght;
+}
+
+.main_nav .secondary_nav a, .main_nav .secondary_nav a:visited {
+	color: $drk_lght;
+}
+
+.main_nav .secondary_nav a:hover {
+	color: $drk_drk;
+}
+
+.main_nav ul {
+	text-align: justify
+}
+
+.main_nav ul::after {
+	width: 100%; 
+	display: inline-block; 
+	content: "."; 
+	visibility: hidden
+}
+
+.main_nav ul li {
+	display: inline-block;
+}
+
+nav#main_nav_initial{
+	height: 66px;
+	overflow: hidden;
+}
+
+nav#main_nav_initial li a{
+	line-height: 66px;
+}
+
+
+/* PERSISTENT NAV (APPEARS AFTER SCROLL) */ 
+nav#main_nav_persistent{
+	position: fixed;
+	top: -96px; //JUST FOR DEV, SHOULD REMOVE!
+	height: 96px;
+	overflow: hidden;
+	width: 100%;
+	z-index: 5000;
+}
+
+nav#main_nav_persistent li a{
+	line-height: 96px;
+}
+
+#nav_bust{
+	font-family: $icons;
+	font-size: 3em;
+	vertical-align: bottom;
+	margin-left: 9px;
+	//margin-top: 1em;
+}
+
+
+
+
+/* Homepage Announcement Teasers */
+/* ---------------------------------------------------------------------------------------- */
+
+.announcement_bar{
+	height: 96px;
+	overflow: hidden;
+	margin: 0 0 12px;
+	background-color: $orng_drk;
+}
+
+.tease-announcement:last-of-type .announcement_bar{
+	margin: 0;
+}
+
+.tease-announcement:nth-child(even) .announcement_bar {
+  background-color: $orng_lght;
+} 
+
+#announcement_title{
+	color: $lght_lght;
+	line-height: 96px;
+	margin: 0;
+}
+
+#announcement_link{
+	color: $lght_lght;
+	margin: 0;
+	line-height: 98px;
+	text-align: right;
+}
+
+.tease-announcement:nth-child(even) .announcement_bar a:hover #announcement_title, .tease-announcement:nth-child(even) .announcement_bar a:hover #announcement_link{
+	color: $orng_drk;
+}
+
+.tease-announcement:nth-child(odd) .announcement_bar a:hover #announcement_title, .tease-announcement:nth-child(odd) .announcement_bar a:hover #announcement_link{
+	color: $orng_lght;
+}
+
+
+
+
+/* Homepage Event Teasers */
+/* ---------------------------------------------------------------------------------------- */
+
+#home_current_season{
+	margin-top: 12px;
+}
+
+.tease-current-show{
+	border-top: 3px solid $lght_drk;
+}
+
+.tease-current-show:first-of-type{
+	border-top: none;
+}
+
+.tease-current-show:first-of-type .home_event_banner img{
+	border-top: 12px solid $drk_lght;
+}
+
+.home_event_banner{
+	position: relative;
+}
+
+.home_event_info {
+	margin-top: 21px; 
+	margin-bottom: 68px;
+}
+
+.home_event_info h1 {
+	margin-top: 0px; 
+}
+
+.home_event_date{
+	margin-bottom: 13px; 
+}
+
+.home_event_title{
+	min-height: 108px;
+	margin-bottom: 0;
+	border-left: 1px solid $drk_lght
+}
+
+.home_event_link{
+	@include outline_button(93px);
+}
+
+.home_event_link h3{
+	color: $orng_drk;
+	line-height: 90px;
+}
+
+a:hover .home_event_link  h3{
+	color: $orng_lght;
+	line-height: 90px;
+}
+
+a:hover .home_event_link{
+	border:3px solid $orng_lght;
+	background-color: $lght_drk;
+}
+
+.home_event_violator{
+	background-color: $orng_drk;
+	transform: rotate(-30deg);
+	width: 150px;
+	height: 150px;
+	text-align: center;
+	border-radius: 50%;
+	display: table;
+	position: absolute;
+	bottom: 15px;
+	left: 30px;
+}
+
+.home_event_violator h2{
+	color: $lght_lght;
+	display: table-cell;
+	padding-top: 33px;
+}
+
+
+
+
+/* Calendar, Upcoming Events */
+/* ---------------------------------------------------------------------------------------- */
+
+.buy_tickets_button{
+	@include outline_button(60px);
+}
+
+
+
+
+/* Headers */
+/* ---------------------------------------------------------------------------------------- */
+
+#home_header{
+	margin-top: 30px;
+}
+
+#home_header_logo{
+	text-align: right;
+	margin-top: 21px;
+}
+
+#home_header_logo h2, #home_header_bust{
+	display: inline;
+}
+
+#home_header_bust{
+	font-family: $icons;
+	font-size: 4em;
+	vertical-align: top;
+	color: $orng_drk;
+	margin-left: -4px;
+	margin-right: -6px;
+}
+
+
+/* Footer */
+/* ---------------------------------------------------------------------------------------- */
+
+#footer {
+	height: 96px;
+	background-color: $orng_drk;
+	color: $lght_lght;
+	line-height: 96px;
+	margin: 0;
+	overflow: hidden;
+}
+
+#footer ul {
+	text-align: justify
+}
+
+#footer ul::after {
+	width: 100%; 
+	display: inline-block; 
+	content: "."; 
+	visibility: hidden
+}
+
+#footer ul li {
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+#footer ul li.footer_ico{
+	font-family: $icons;
+}
+

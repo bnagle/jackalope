@@ -1,0 +1,77 @@
+{% include 'html-header.twig' %}
+{% block head %}
+{% endblock %}
+</head>
+    <body class="{{body_class}}" data-source="base.twig">
+        <header class="header" >
+            {% block header %}
+            
+
+
+<!-- NAVIGATION -->
+<!-- ---------------------------------------------------------------------------------------------- -->
+            
+            <!-- Initial Nav (That'll Scroll Off the Screen) -->
+            <nav id='main_nav_initial' class='main_nav' role='navigation'>
+                <div class='container'><div class='row'>
+                    <ul class='secondary_nav col-md-3'>
+                        <li><a href='#_'>Press</a></li>
+                        <li><a href='#_'>Contact</a></li>
+                        <li><a href='#_'>Support</a></li>
+                    </ul>
+
+                    <ul class='primary_nav col-md-6 pull-right'>
+                        <li><a href='#_'>Home</a></li>
+                        <li><a href='#_'>Calendar &amp; Tickets</a></li>
+                        <li><a href='#_'>The Frontier Storefront</a></li>
+                        <li><a href='#_'>About Jackalope</a></li>
+                    </ul> 
+                </div></div><!-- container and row (Bootstrap) -->
+            </nav><!-- #main_nav_initial -->
+
+            <!-- Secondary Nav (That'll stay persistant and will be the only nav on the secondary pages) -->
+            <nav id='main_nav_persistent' class='main_nav' role='navigation'>
+                <div class='container'><div class='row'>
+                <ul class='secondary_nav col-md-3'>
+                        <li><a href='#_'>Press</a></li>
+                        <li><a href='#_'>Contact</a></li>
+                        <li><a href='#_'>Support</a></li>
+                </ul>
+
+                <ul class='primary_nav col-md-7 pull-right'>
+                    <li><a href='#_'>Home</a></li>
+                    <li><a href='#_'>Calendar &amp; Tickets</a></li>
+                    <li><a href='#_'>The Frontier Storefront</a></li>
+                    <li id='about_jackalope'><a href='#_'>About Jackalope <span id='nav_bust'></span></a></li>
+                </ul> 
+                </div></div><!-- container and row (Bootstrap) -->
+            </nav><!-- #main_nav_persistent -->
+            {% endblock %}
+        </header>
+
+
+
+
+<!-- INCLUDE THE CONTENT -->
+<!-- ---------------------------------------------------------------------------------------------- -->
+
+        <section id="content" role="main" class="content-wrapper">
+            
+            <div class="wrapper">
+                {% block content %}
+                    Sorry, no content
+                {% endblock %}
+            </div>
+
+        </section>
+
+
+
+<!-- INCLUDE THE FOOTER -->
+<!-- ---------------------------------------------------------------------------------------------- -->
+
+        {% include 'footer.twig' %}
+
+
+    </body>
+</html>

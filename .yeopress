@@ -1,0 +1,18 @@
+{
+	"wpVer": "3.8.1",
+	"url": "http://jackalopetheatre.org",
+	"tablePrefix": "wp_",
+	"dbHost": "localhost",
+	"dbName": "jackalope_db",
+	"dbUser": "root",
+	"dbPass": "root",
+	"git": false,
+	"customDirs": false,
+	"installTheme": true,
+	"themeDir": "/Users/brad/z_apps/jackalope ",
+	"themeType": "tar",
+	"themeTarballUrl": "http://sandboxstaging.net/sbx_wp_timber.tar.gz",
+	"wpDir": ".",
+	"contentDir": "wp-content",
+	"saltKeys": "define('AUTH_KEY',         '@_ 3DfO*-Vtp[P[?bVoD(ghboHK%Ma{|crSjd@CeYqZ:aSPOuZd;m7VlS|9b9#tO');\ndefine('SECURE_AUTH_KEY',  '>WQeJ#1~WqCj-q#lZ|kz_FXu!6#47O .+`s4e)T&Eb1%#t7K7C,QM&eIyg)[u)<f');\ndefine('LOGGED_IN_KEY',    ' V/X8+6?zB}Z<i-_c+}b!&L;zkvsB`Imw@Gqh#EO7.p??GD}3]Ga5Gz8x/*mqv>L');\ndefine('NONCE_KEY',        'mA_{1;F~~R01y6M+P1Bs6]5SZo<K~Pk4K@88_XQ#<-O{|%a{Pb>c)URnL+Tp|&OD');\ndefine('AUTH_SALT',        'Y&ewQQQ/{q5N;*v5rhrHyeHND*EmSDwHDf(!vc22.ft=^QkMEy]d9;v_{V)CHz-Z');\ndefine('SECURE_AUTH_SALT', ']Mz^sfUm/rNQA${zO)ZZ[_9boOfp`.$J!K@#(@*v-Y+G`#BCd#>vd=TA@X771dX|');\ndefine('LOGGED_IN_SALT',   'kw[=/OrAu|?E-%nXl>@Nhp@7)~0Ft|Ihs*jb%hUCN5TW|s023;)|jd<;Bai-<(Yj');\ndefine('NONCE_SALT',       'ML+9^v-|>h+f:YsBLX:Rq-ohoS%b_0*Kx.|w*uUP[*wLT45dUA&[ljn<rVtHS/zY');\n"
+}

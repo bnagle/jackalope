@@ -1,0 +1,23 @@
+<footer id="footer">
+	<div class='container'><div class='row'>
+
+		<div class='col-md-3'>
+			&copy; Copyright {{"now"|date('Y')}}, Jackalope Theatre
+		</div> 
+
+		<div class='col-md-3 pull-right'>
+			<ul>
+				<li>Connect Via:</li>
+				<li class='footer_ico twitter_ico'></li>
+				<li class='footer_ico fb_ico'></li>
+				<li class='footer_ico flickr_ico'></li>
+				<li class='footer_ico youtube_ico'></li>
+		</div> 
+
+	</div></div> <!-- container, row -->
+</footer>
+
+<!-- include bootstrap and custom js -->
+<script src="{{theme_directory}}/js/global_prod.min.js"></script> 
+
+{{ function('wp_footer') }}

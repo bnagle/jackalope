@@ -1,0 +1,43 @@
+{% extends "base.twig" %}
+
+
+{% block content %}
+
+
+<!-- ANNOUNCEMENTS -->
+<!-- ---------------------------------------------------------------------------------------------- -->
+
+<section id='home_announcements'>
+	{% for announcement in announcements %}
+		{% include ['tease-announcement.twig'] %}
+	{% endfor %}
+</section>
+
+
+<!-- HEADER -->
+<!-- ---------------------------------------------------------------------------------------------- -->
+
+  <section class='container' id='home_header'><div class='row'>
+
+  	<div class='col-md-3 season'>
+      <h2 role="banner">2013–2014 Season</h2>
+    </div>
+
+  	<div class='col-md-4 pull-right'>
+      <div id='home_header_logo'><h2 role="banner">JACKALOPE</h2><p id='home_header_bust'></p><h2>THEATRE</h2></div>
+    </div>
+
+  </div></section><!-- container and row (Bootstrap) -->
+
+
+
+<!-- CURRENT SEASON -->
+<!-- ---------------------------------------------------------------------------------------------- -->
+
+  <section id='home_current_season'>
+    {% for current_show in current_season %}
+      {% include ['tease-current_show.twig'] %}
+    {% endfor %}
+  </section>
+
+{% endblock %}

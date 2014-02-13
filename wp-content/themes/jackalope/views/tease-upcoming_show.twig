@@ -1,0 +1,37 @@
+
+<!-- NEED TO SET UP A SHOW TYPE 
+		 ALSO, SET UP IF STATEMENTS FOR CONDITIONAL INFO
+		 PROBABLY GOOD TO NAIL DOWN THE BACK-END TO BE CERTAIN WHICH VALUES TO WORK WITH HERE
+		 CAN SEND OVER TO NATE TO START WORKING ON CONTENT AS I DEVELOP THE FRONT END
+-->
+
+<article class="tease tease-current-show">
+	{% block content %}
+			<div class='container'>
+
+				
+				<div class='row home_event_info'>
+					<div class='col-md-4 home_event_date_credits'>
+						<h1 class='home_event_date'>{{current_show.show_run}}</h1>
+						<h3 class='home_event_author'>By {{current_show.playwright}}</h3>
+						<h3 class='home_event_director'>Directed by {{current_show.director}}</h3>
+					</div>
+
+					<div class='col-md-4 home_event_title'>
+						<h1>{{current_show.title}}</h1>
+					</div>
+
+					<div class='col-md-3 pull-right'>
+						<a href='{{current_show.link}}'>
+							<div class='home_event_link'>
+								<div class='home_event_button'>
+									<h3>LEARN MORE</h3>
+								</div>	
+							</div><!-- home_event_link -->
+						</a>
+					</div><!-- col -->
+				</div><!-- row -->
+
+			</div><!-- container -->
+	{% endblock %}
+</article>

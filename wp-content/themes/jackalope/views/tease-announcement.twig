@@ -1,0 +1,19 @@
+<article class="tease tease-announcement" id="tease-announcement">
+	{% block content %}
+		<div class='announcement_bar'>
+			<a href="{{announcement.link}}">
+				<div class='container'><div class='row'>
+
+					<div class='col-md-10'>
+						<h2 id='announcement_title'>{{announcement.title}}</h2>
+					</div>
+
+					<div class='col-md-2 pull-right'>
+						<h3 id='announcement_link'>LEARN MORE</h3>
+					</div>
+
+				</div></div><!-- container, row -->
+			</a>
+		</div><!-- announement bar -->
+	{% endblock %}
+</article>
