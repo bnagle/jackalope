@@ -24,7 +24,7 @@ if (isset($_SERVER['PLATFORM']) && $_SERVER['PLATFORM'] == 'PAGODABOX') {
     define('DB_NAME', $_SERVER['DB1_NAME']);
     define('DB_USER', $_SERVER['DB1_USER']);
     define('DB_PASSWORD', $_SERVER['DB1_PASS']);
-    define ('DB_HOST', 'tunnel.pagodabox.com';
+    define ('DB_HOST', 'tunnel.pagodabox.com:3306');
 }
 else {
     define('DB_NAME', 'jackalope_db');
