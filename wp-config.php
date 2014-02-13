@@ -19,18 +19,18 @@ if (file_exists(dirname(__FILE__) . '/local-config.php')) {
 	include(dirname(__FILE__) . '/local-config.php');
 }
 
-// Global DB config
-if (!defined('DB_NAME')) {
-	define('DB_NAME', 'jackalope_db');
+
+f (isset($_SERVER['PLATFORM']) && $_SERVER['PLATFORM'] == 'PAGODABOX') {
+    define('DB_NAME', $_SERVER['DB1_NAME']);
+    define('DB_USER', $_SERVER['DB1_USER']);
+    define('DB_PASSWORD', $_SERVER['DB1_PASS']);
+    define ('DB_HOST', $_SERVER['DB1_HOST'] . ':' . $_SERVER['DB1_PORT']);
 }
-if (!defined('DB_USER')) {
-	define('DB_USER', 'root');
-}
-if (!defined('DB_PASSWORD')) {
-	define('DB_PASSWORD', 'root');
-}
-if (!defined('DB_HOST')) {
-	define('DB_HOST', 'localhost');
+else {
+    define('DB_NAME', 'jackalope_db');
+    define('DB_USER', 'root');
+    define('DB_PASSWORD', 'root');
+    define('DB_HOST', 'localhost');
 }
 
 /** Database Charset to use in creating database tables. */
