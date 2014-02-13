@@ -1,8 +1,6 @@
 .DS_Store
 wp-content/uploads/
 
-wp-config.php
-
 # Stuff that brad has that hopefully won't die and kill everyone
 .htaccess
 .yeopress
