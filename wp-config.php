@@ -20,7 +20,7 @@ if (file_exists(dirname(__FILE__) . '/local-config.php')) {
 }
 
 
-f (isset($_SERVER['PLATFORM']) && $_SERVER['PLATFORM'] == 'PAGODABOX') {
+if (isset($_SERVER['PLATFORM']) && $_SERVER['PLATFORM'] == 'PAGODABOX') {
     define('DB_NAME', $_SERVER['DB1_NAME']);
     define('DB_USER', $_SERVER['DB1_USER']);
     define('DB_PASSWORD', $_SERVER['DB1_PASS']);
