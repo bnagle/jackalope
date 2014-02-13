@@ -1,8 +1,14 @@
 web1: 
-  name: dale
   shared_writable_dirs:
     - wp-content/uploads/
+  php_extensions:
+    - mysql
+    - eaccelerator
+    - curl
+    - gd
+    - apc
 
 db1:
   name: wp-db
   type: mysql
+
