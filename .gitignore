@@ -1,6 +1,6 @@
 .DS_Store
-wp-content/uploads/
 
 # Stuff that brad has that hopefully won't die and kill everyone
 .htaccess
 .yeopress
+.ruby-*
